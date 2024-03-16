@@ -1,2 +1,4 @@
 rootdir
 outdir
+
+untuk menjalankan : tsc && node bundle/function
