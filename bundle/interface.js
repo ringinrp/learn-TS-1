@@ -1,26 +1,5 @@
-type CoreCount = 2 | 4 | 8;
-type CoreName = "dual core" | "octa core";
-
-type Core = CoreCount | CoreName;
-
-interface IProcessor {
-    brand: string;
-    baseModel: string;
-    modelName: string;
-    coreTotal: Core;
-    clockSpeed: number;
-    
-}
-
-interface Intel extends IProcessor {
-    turboBoost: boolean;
-}
-interface AMD extends IProcessor {
-    precisionBoost?: boolean;
-}
-
-
-function createIntel(processor: Intel): void {
+"use strict";
+function createIntel(processor) {
     console.log(`
     ================================================
     Terima kasih ${processor.brand}, anda telah berhasil membuat processor dengan detail berikut: 
@@ -33,7 +12,7 @@ function createIntel(processor: Intel): void {
     =================================================
     `);
 }
-function createAMD(processor: AMD): void {
+function createAMD(processor) {
     console.log(`
     ================================================
     Terima kasih ${processor.brand}, anda telah berhasil membuat processor dengan detail berikut: 
@@ -47,8 +26,7 @@ function createAMD(processor: AMD): void {
     =================================================
     `);
 }
-
-const corei5: Intel = {
+const corei5 = {
     brand: 'intel',
     baseModel: 'core i5',
     modelName: 'i5-11310f',
@@ -56,7 +34,7 @@ const corei5: Intel = {
     coreTotal: 2,
     turboBoost: false
 };
-const ryzen3: AMD = {
+const ryzen3 = {
     brand: 'amd',
     baseModel: 'ryzen 3',
     modelName: 'r-5570x',
@@ -64,6 +42,5 @@ const ryzen3: AMD = {
     coreTotal: 4,
     precisionBoost: true
 };
-
 createIntel(corei5);
 createAMD(ryzen3);

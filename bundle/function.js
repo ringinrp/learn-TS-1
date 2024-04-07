@@ -1,7 +1,7 @@
 "use strict";
-function create() {
-    return 2;
-}
+// function create(): number {
+//     return 2;
+// } 
 //arrow function
 const create2 = () => "hello world";
 function add(x, y) {
@@ -12,7 +12,7 @@ let ringin;
 ringin = "adalah pria";
 let sayaManusia;
 sayaManusia = "Ringin Restu Pati";
-console.log(create());
+// console.log(create());
 const result = create2();
 console.log(result);
 add(10, 20);

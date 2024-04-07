@@ -1,6 +1,6 @@
-function create(): number {
-    return 2;
-}
+// function create(): number {
+//     return 2;
+// } 
 
 //arrow function
 const  create2 = (): string => "hello world"
@@ -22,7 +22,7 @@ let sayaManusia : Gender;
 sayaManusia ="Ringin Restu Pati"
 
 
-console.log(create());
+// console.log(create());
 
 const result = create2();
 console.log(result);
